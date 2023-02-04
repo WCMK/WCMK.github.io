@@ -220,24 +220,28 @@
     ==查看npm版本==
     ./npm -v
     显示/usr/bin/env: node: No such file or directory
-这说明全局没有信息，当前目录有，因此我们需要去配置变量环境（==这里的变量环境配置和Windows配置变量环境道理类似，但不相同==）
- (8)配置环境变量
-    vi /etc/profile
+  这说明全局没有信息，当前目录有，因此我们需要去配置变量环境（==这里的变量环境配置和Windows配置变量环境道理类似，但不相同==）
+</code></pre>
+<h5 id="8-配置环境变量"><a href="#8-配置环境变量" class="headerlink" title="(8)配置环境变量"></a>(8)配置环境变量</h5><pre><code>    vi /etc/profile
     进入到配置文件夹最后加上这段代码
     #set nodejs environment
     export PATH=$PAHT:/usr/local/node/bin
     输入完成之后保存退出执行命令让新增的配置生效
     source  /etc/profile
- (9)如果执行node -v 命令报错，接着配置一个软连接：
-    ln -s /usr/local/node/bin/node /usr/local/bin/
+</code></pre>
+<h5 id="9-如果执行node-v-命令报错，接着配置一个软连接："><a href="#9-如果执行node-v-命令报错，接着配置一个软连接：" class="headerlink" title="(9)如果执行node -v 命令报错，接着配置一个软连接："></a>(9)如果执行node -v 命令报错，接着配置一个软连接：</h5><pre><code>    ln -s /usr/local/node/bin/node /usr/local/bin/
     ln -s /usr/local/node/bin/npm /usr/local/bin/
- (10)查看版本信息
-     node -v
+</code></pre>
+<h5 id="10-查看版本信息"><a href="#10-查看版本信息" class="headerlink" title="(10)查看版本信息"></a>(10)查看版本信息</h5><pre><code>     node -v
      显示信息：v14.15.1
      npm -v
      显示信息：6.14.8
 </code></pre>
-<h5 id="x3D-x3D-补充-x3D-x3D"><a href="#x3D-x3D-补充-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;补充&#x3D;&#x3D;"></a>&#x3D;&#x3D;补充&#x3D;&#x3D;</h5>
+<h5 id="x3D-x3D-补充-x3D-x3D"><a href="#x3D-x3D-补充-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;补充&#x3D;&#x3D;"></a>&#x3D;&#x3D;补充&#x3D;&#x3D;</h5><hr>
+<pre><code>   这里我们需要将npm更改为cnpm，更改cnpm源是要注意版本的适配;(node v14.15.1 适配的npm为 6.14.8，cnpm为)
+    
+</code></pre>
+
       
 
       
